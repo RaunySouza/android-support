@@ -36,7 +36,7 @@ Then add the library(ies) to your project:
 
 ```groovy
 dependencies {
-    compile 'com.github.RaunySouza:android-support:<Module>:<Version>'
+    compile 'com.github.RaunySouza.android-support:<Module>:<Version>'
 }
 ```
 
