@@ -30,3 +30,6 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+group = 'com.github.RaunySouza'
+version = '1.0.0'
