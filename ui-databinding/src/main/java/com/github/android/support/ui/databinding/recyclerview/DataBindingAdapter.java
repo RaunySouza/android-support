@@ -1,4 +1,4 @@
-package com.github.raunysouza.android.support.ui.databinding.recyclerview;
+package com.github.android.support.ui.databinding.recyclerview;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;

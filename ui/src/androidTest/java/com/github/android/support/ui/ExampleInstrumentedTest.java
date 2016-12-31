@@ -1,4 +1,4 @@
-package com.github.raunysouza.android.support.ui;
+package com.github.android.support.ui;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

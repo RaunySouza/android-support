@@ -1,4 +1,4 @@
-package com.github.raunysouza.android.support;
+package com.github.android.support;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

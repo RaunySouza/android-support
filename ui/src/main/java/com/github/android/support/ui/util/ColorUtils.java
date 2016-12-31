@@ -1,4 +1,4 @@
-package com.github.raunysouza.android.support.ui.util;
+package com.github.android.support.ui.util;
 
 import android.graphics.Color;
 

@@ -1,4 +1,4 @@
-package com.github.raunysouza.android.support.ui.databinding;
+package com.github.android.support.ui.databinding;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

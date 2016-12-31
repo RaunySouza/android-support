@@ -1,4 +1,4 @@
-package com.github.raunysouza.android.support.ui.recyclerview;
+package com.github.android.support.ui.recyclerview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
