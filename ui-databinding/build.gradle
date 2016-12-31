@@ -27,5 +27,5 @@ android {
 }
 
 dependencies {
-    compile project(':android-support-ui')
+    compile project(':ui')
 }
