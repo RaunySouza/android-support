@@ -6,14 +6,14 @@ Android Support provides utility classes to help creation of Android Application
 
 This repository is divided in follow modules:
 
-* android-support-ui
-* android-support-ui-databinding
+* ui
+* ui-databinding
 
-### Android Support UI
+### UI
 
 Provides utility classes to help creation of UI Elements, e.g. Dialogs, Activities, Views, etc.
 
-### Android Support UI Databinding
+### UI Databinding
 
 Like android-support-ui, plus helper classes to Android DataBinding.
 
