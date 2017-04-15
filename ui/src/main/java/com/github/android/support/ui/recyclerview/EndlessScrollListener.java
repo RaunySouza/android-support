@@ -115,6 +115,14 @@ public final class EndlessScrollListener extends RecyclerView.OnScrollListener {
         this.loading = true;
     }
 
+    public int getCurrentPage() {
+        return currentPage;
+    }
+
+    public void rollback() {
+        currentPage--;
+    }
+
     public interface OnLoadMoreListener {
         void onLoadMore(int page, int totalItemsCount, RecyclerView view) throws Exception;
     }

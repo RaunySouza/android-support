@@ -44,4 +44,12 @@ public class EndlessRecyclerView extends RecyclerView {
     public void reset() {
         mListener.resetState();
     }
+
+    public int getCurrentPage() {
+        return mListener.getCurrentPage();
+    }
+
+    public void rollbackPagination() {
+        mListener.rollback();
+    }
 }
