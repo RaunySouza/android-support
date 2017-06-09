@@ -11,7 +11,9 @@ import android.view.View;
  * @author raunysouza
  */
 public final class ViewUtils {
-    private ViewUtils() {}
+    private ViewUtils() {
+        throw new UnsupportedOperationException("Utility Class. No instances!");
+    }
 
     @CheckResult
     @SuppressWarnings({ "unchecked", "UnusedDeclaration" })

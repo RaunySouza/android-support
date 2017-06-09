@@ -27,7 +27,16 @@ public class EndlessRecyclerView extends RecyclerView {
 
     public EndlessRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        setEndlessScrollListener();
+    }
 
+    @Override
+    public void setLayoutManager(LayoutManager layout) {
+        super.setLayoutManager(layout);
+        setEndlessScrollListener();
+    }
+
+    private void setEndlessScrollListener() {
         if (getLayoutManager() instanceof StaggeredGridLayoutManager) {
             addOnScrollListener(mListener = new EndlessScrollListener((StaggeredGridLayoutManager) getLayoutManager()));
         } else if (getLayoutManager() instanceof LinearLayoutManager) {

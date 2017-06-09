@@ -6,7 +6,9 @@ import android.graphics.Color;
  * @author raunysouza
  */
 public final class ColorUtils {
-    private ColorUtils() {}
+    private ColorUtils() {
+        throw new UnsupportedOperationException("Utility Class. No instances!");
+    }
 
     @SuppressWarnings("UnusedDeclaration")
     public static int lighten(int color) {
