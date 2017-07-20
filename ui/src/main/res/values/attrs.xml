@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoaderLayout">
+        <attr name="loader_actionButtonStyle" format="reference"/>
+        <attr name="loader_messageStyle" format="reference"/>
+        <attr name="loader_message" format="string"/>
+        <attr name="loader_actionButtonText" format="string"/>
+        <attr name="loader_showActionButton" format="boolean"/>
+        <attr name="loader_state" format="enum">
+            <enum name="loaded" value="0"/>
+            <enum name="loading" value="1"/>
+            <enum name="error" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

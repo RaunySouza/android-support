@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -46,7 +47,6 @@ public abstract class DataBindingAdapter<T, B extends ViewDataBinding> extends R
         if (mItems == null) {
             return 0;
         }
-
         return mItems.size();
     }
 
@@ -58,5 +58,29 @@ public abstract class DataBindingAdapter<T, B extends ViewDataBinding> extends R
     public void setItems(List<T> items) {
         mItems = items;
         notifyDataSetChanged();
+    }
+
+    public void addItem(T item) {
+        if (mItems != null) {
+            int index = mItems.size();
+            mItems.add(item);
+            notifyItemInserted(index);
+        }
+    }
+
+    public void addAll(Collection<T> items) {
+        if (mItems != null) {
+            int index = mItems.size();
+            mItems.addAll(items);
+            notifyItemRangeInserted(index, items.size());
+        }
+    }
+
+    public void removeItem(T item) {
+        if (mItems != null) {
+            int index = mItems.indexOf(item);
+            mItems.remove(index);
+            notifyItemRemoved(index);
+        }
     }
 }

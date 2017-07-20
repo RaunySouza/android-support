@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="message"
+            type="String"/>
+        <variable
+            name="showActionButton"
+            type="boolean"/>
+        <variable
+            name="state"
+            type="int"/>
+        <variable
+            name="actionButtonText"
+            type="String"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.github.android.support.ui.widget.LoaderLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:loader_message="@{message, default=@string/app_name}"
+            app:loader_showActionButton="@{showActionButton, default=true}"
+            app:loader_actionButtonText="@{actionButtonText}"
+            app:loader_state="@{state, default=error}">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"/>
+
+            </LinearLayout>
+
+        </com.github.android.support.ui.widget.LoaderLayout>
+
+    </LinearLayout>
+</layout>
