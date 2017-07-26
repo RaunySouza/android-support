@@ -23,6 +23,11 @@ public class LoaderLayout extends RelativeLayout {
     public static final int STATE_LOADING = 1;
     public static final int STATE_ERROR = 2;
 
+    public static final int SHOWN_ALWAYS = 0;
+    public static final int HIDDEN_ALWAYS = 1;
+    public static final int ONLY_ERROR = 2;
+    public static final int ONLY_LOADING = 3;
+
     private TextView mMessageTextView;
     private Button mActionButton;
     private ProgressBar mProgressBar;
@@ -30,6 +35,7 @@ public class LoaderLayout extends RelativeLayout {
 
     private int mState;
     private boolean mShowActionButton;
+    private int mTextBehavior;
 
     public LoaderLayout(Context context) {
         this(context, null);
@@ -67,6 +73,7 @@ public class LoaderLayout extends RelativeLayout {
         String actionButtonText = typedArray.getString(R.styleable.LoaderLayout_loader_actionButtonText);
         mShowActionButton = typedArray.getBoolean(R.styleable.LoaderLayout_loader_showActionButton, true);
         mState = typedArray.getInt(R.styleable.LoaderLayout_loader_state, STATE_LOADED);
+        mTextBehavior = typedArray.getInt(R.styleable.LoaderLayout_loader_textBehavior, SHOWN_ALWAYS);
 
         mMessageTextView.setText(message);
         if (actionButtonText != null) {
@@ -105,9 +112,13 @@ public class LoaderLayout extends RelativeLayout {
                     View child = getChildAt(i);
                     if (isInternalChild(child.getId())) {
                         mProgressBar.setVisibility(VISIBLE);
-                        mMessageTextView.setVisibility(VISIBLE);
                         mContainer.setVisibility(VISIBLE);
                         mActionButton.setVisibility(GONE);
+                        if (mTextBehavior == SHOWN_ALWAYS || mTextBehavior == ONLY_LOADING) {
+                            mMessageTextView.setVisibility(VISIBLE);
+                        } else {
+                            mMessageTextView.setVisibility(GONE);
+                        }
                     } else {
                         child.setVisibility(GONE);
                     }
@@ -118,8 +129,12 @@ public class LoaderLayout extends RelativeLayout {
                     View child = getChildAt(i);
                     if (isInternalChild(child.getId())) {
                         mProgressBar.setVisibility(GONE);
-                        mMessageTextView.setVisibility(VISIBLE);
                         mContainer.setVisibility(VISIBLE);
+                        if (mTextBehavior == SHOWN_ALWAYS || mTextBehavior == ONLY_ERROR) {
+                            mMessageTextView.setVisibility(VISIBLE);
+                        } else {
+                            mMessageTextView.setVisibility(GONE);
+                        }
                         if (mShowActionButton) {
                             mActionButton.setVisibility(VISIBLE);
                         }

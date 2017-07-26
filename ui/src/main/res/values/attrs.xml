@@ -6,6 +6,12 @@
         <attr name="loader_message" format="string"/>
         <attr name="loader_actionButtonText" format="string"/>
         <attr name="loader_showActionButton" format="boolean"/>
+        <attr name="loader_textBehavior" format="enum">
+            <enum name="shown_always" value="0"/>
+            <enum name="hidden_always" value="1"/>
+            <enum name="only_error" value="2"/>
+            <enum name="only_loading" value="3"/>
+        </attr>
         <attr name="loader_state" format="enum">
             <enum name="loaded" value="0"/>
             <enum name="loading" value="1"/>
