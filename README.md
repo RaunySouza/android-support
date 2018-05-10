@@ -2,26 +2,26 @@
 
 [![](https://www.jitpack.io/v/RaunySouza/android-support.svg)](https://www.jitpack.io/#RaunySouza/android-support)
 
-Android Support provides utility classes to help creation of Android Applications.
+Android Support provides utility classes for helping create Android Applications.
 
-This repository is divided in follow modules:
+This repository is divided in the following modules:
 
 * ui
 * ui-databinding
 
 ### UI
 
-Provides utility classes to help creation of UI Elements, e.g. Dialogs, Activities, Views, etc.
+Provides utility classes for helping create UI Elements, e.g. Dialogs, Activities, Views, etc.
 
 ### UI Databinding
 
-Like android-support-ui, plus helper classes to Android DataBinding.
+Similar to android-support-ui, plus helper classes to Android DataBinding.
 
 Obs.: This library already has dependency of android-support-ui module.
 
 ## Including in your project
 
-You need add JitPack repository into your root project:
+You need to add JitPack repository into your root project:
 
 ```groovy
 allprojects {

@@ -1,6 +1,7 @@
 package com.github.android.support.ui.databinding.util;
 
 import android.databinding.BindingAdapter;
+import android.view.View;
 
 import com.github.android.support.ui.widget.LoaderLayout;
 
@@ -30,5 +31,12 @@ public class UiDataBindingAdapterUtils {
     @BindingAdapter("loader_showActionButton")
     public static void loaderSetShowActionButton(LoaderLayout loaderLayout, boolean value) {
         loaderLayout.setShowActionButton(value);
+    }
+
+    @BindingAdapter("loader_buttonAction")
+    public static void loaderSetAction(LoaderLayout loaderLayout, View.OnClickListener action) {
+        if (action != null) {
+            loaderLayout.setAction(action);
+        }
     }
 }

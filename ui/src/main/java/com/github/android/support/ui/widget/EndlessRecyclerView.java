@@ -37,6 +37,9 @@ public class EndlessRecyclerView extends RecyclerView {
     }
 
     private void setEndlessScrollListener() {
+        if (mListener != null) {
+            removeOnScrollListener(mListener);
+        }
         if (getLayoutManager() instanceof StaggeredGridLayoutManager) {
             addOnScrollListener(mListener = new EndlessScrollListener((StaggeredGridLayoutManager) getLayoutManager()));
         } else if (getLayoutManager() instanceof LinearLayoutManager) {
