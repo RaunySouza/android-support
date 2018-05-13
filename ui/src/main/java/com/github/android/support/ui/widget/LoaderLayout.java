@@ -12,7 +12,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.github.android.support.ui.R;
-import com.github.android.support.ui.util.ViewUtils;
 
 /**
  * @author rauny.souza
@@ -60,10 +59,10 @@ public class LoaderLayout extends RelativeLayout {
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.LoaderLayout, defStyleAttr, defStyleRes);
 
         inflate(getContext(), R.layout.view_loader_layout, this);
-        mMessageTextView = ViewUtils.findById(this, R.id.loader_message);
-        mActionButton = ViewUtils.findById(this, R.id.loader_action);
-        mProgressBar = ViewUtils.findById(this, R.id.loader_progress_bar);
-        mContainer = ViewUtils.findById(this, R.id.loader_container);
+        mMessageTextView = findViewById(R.id.loader_message);
+        mActionButton = findViewById(R.id.loader_action);
+        mProgressBar = findViewById(R.id.loader_progress_bar);
+        mContainer = findViewById(R.id.loader_container);
 
         String message = "";
         if (typedArray.hasValue(R.styleable.LoaderLayout_loader_message)) {

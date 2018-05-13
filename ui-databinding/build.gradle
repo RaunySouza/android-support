@@ -25,5 +25,7 @@ android {
 }
 
 dependencies {
-    compile project(':ui')
+    implementation "com.android.support:appcompat-v7:${android_support_version}"
+    implementation "com.android.support:design:${android_support_version}"
+    implementation project(':ui')
 }
