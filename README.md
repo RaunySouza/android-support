@@ -17,8 +17,6 @@ Provides utility classes for helping create UI Elements, e.g. Dialogs, Activitie
 
 Similar to android-support-ui, plus helper classes to Android DataBinding.
 
-Obs.: This library already has dependency of android-support-ui module.
-
 ## Including in your project
 
 You need to add JitPack repository into your root project:
@@ -36,7 +34,7 @@ Then add the library(ies) to your project:
 
 ```groovy
 dependencies {
-    compile 'com.github.RaunySouza.android-support:<Module>:<Version>'
+    implementation 'com.github.RaunySouza.android-support:<Module>:<Version>'
 }
 ```
 
